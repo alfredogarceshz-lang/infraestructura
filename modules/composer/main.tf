@@ -1,11 +1,18 @@
-# Structured expansion module: enable with create=true once networking and quotas are ready.
-resource "terraform_data" "composer_config" {
+resource "google_composer_environment" "main" {
   count = var.create ? 1 : 0
 
-  input = {
-    project_id    = var.project_id
-    region        = var.region
-    composer_name = var.composer_name
-    labels        = var.labels
+  project    = var.project_id
+  name       = var.composer_name
+  region     = var.region
+  labels     = var.labels
+
+  config {
+    software_config {
+      image_version = "composer-2-stable"
+    }
+
+    node_config {
+      zone = "${var.region}-a"
+    }
   }
 }

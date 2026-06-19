@@ -42,6 +42,8 @@ terraform validate
 
 Esto valida sintaxis, dependencias de modulos y estructura.
 
+> Nota: los módulos `composer`, `dataproc`, `dataplex`, `pubsub`, `cloud_run` y `vpn` están como placeholders y actualmente no crean recursos GCP reales.
+
 ## Ejecucion real (con backend GCS)
 
 1. Crear bucket de state (ver scripts/bootstrap.ps1).
@@ -72,6 +74,8 @@ Ejemplo:
 cd terraform-gcp/scripts
 ./bootstrap.ps1 -ProjectId gim-data-dev -Region us-central1 -StateBucket gim-tfstate-dev
 ```
+
+> Importante: `secret_value` en los archivos `terraform.tfvars` es un valor de ejemplo y debe reemplazarse por un secreto real o gestionarse mediante otro mecanismo seguro.
 
 ## Mermaid
 

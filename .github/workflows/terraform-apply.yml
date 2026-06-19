@@ -34,8 +34,15 @@ jobs:
           if [ "$BRANCH" = "qa" ]; then echo "ENV_DIR=environments/qa" >> $GITHUB_ENV; fi
           if [ "$BRANCH" = "prod" ]; then echo "ENV_DIR=environments/prod" >> $GITHUB_ENV; fi
 
+      - name: Set Terraform secret from GitHub Secrets
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "develop" ]; then echo "TF_VAR_secret_value=${{ secrets.SECRET_VALUE_DEV }}" >> $GITHUB_ENV; fi
+          if [ "$BRANCH" = "qa" ]; then echo "TF_VAR_secret_value=${{ secrets.SECRET_VALUE_QA }}" >> $GITHUB_ENV; fi
+          if [ "$BRANCH" = "prod" ]; then echo "TF_VAR_secret_value=${{ secrets.SECRET_VALUE_PROD }}" >> $GITHUB_ENV; fi
+
       - name: Terraform init
-        working-directory: terraform-gcp/${{ env.ENV_DIR }}
+        working-directory: infraestructura/${{ env.ENV_DIR }}
         run: |
           terraform init -backend-config="bucket=${{ vars.TFSTATE_BUCKET }}" -backend-config="prefix=${{ env.ENV_DIR }}"
 
