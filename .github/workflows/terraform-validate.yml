@@ -1,0 +1,46 @@
+name: Terraform Validate and Plan
+
+on:
+  pull_request:
+    branches: [develop, qa, prod]
+  push:
+    branches: [develop, qa, prod]
+
+jobs:
+  validate-plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Resolve environment path from branch
+      
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "develop" ]; then echo "ENV_DIR=environments/dev" >> $GITHUB_ENV; fi
+          if [ "$BRANCH" = "qa" ]; then echo "ENV_DIR=environments/qa" >> $GITHUB_ENV; fi
+          if [ "$BRANCH" = "prod" ]; then echo "ENV_DIR=environments/prod" >> $GITHUB_ENV; fi
+
+      - name: Terraform fmt check
+        working-directory: terraform-gcp/${{ env.ENV_DIR }}
+        run: terraform fmt -check -recursive
+
+      - name: Terraform init
+        working-directory: terraform-gcp/${{ env.ENV_DIR }}
+        run: |
+          terraform init -backend-config="bucket=${{ vars.TFSTATE_BUCKET }}" -backend-config="prefix=${{ env.ENV_DIR }}"
+
+      - name: Terraform validate
+        working-directory: terraform-gcp/${{ env.ENV_DIR }}
+        run: terraform validate
+
+      - name: Terraform plan
+        working-directory: terraform-gcp/${{ env.ENV_DIR }}
+        run: terraform plan -var-file=terraform.tfvars -input=false -lock=false
