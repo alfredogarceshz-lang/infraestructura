@@ -1,9 +1,9 @@
-resource "terraform_data" "dataplex_config" {
+resource "google_dataplex_lake" "main" {
   count = var.create ? 1 : 0
 
-  input = {
-    project_id = var.project_id
-    region     = var.region
-    lake_name  = var.lake_name
-  }
+  location       = var.region
+  name           = var.lake_name
+  project        = var.project_id
+  display_name   = var.lake_name
+  description    = "Data Lake managed by Terraform"
 }
