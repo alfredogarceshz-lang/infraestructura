@@ -43,10 +43,7 @@ module "bigquery" {
   project_id = module.naming.project_id
   location   = var.region
   datasets   = var.datasets
-  example_table = {
-    dataset_id = "brz_hubspot"
-    table_id   = var.example_table_id
-  }
+  
 }
 
 module "secret_manager" {

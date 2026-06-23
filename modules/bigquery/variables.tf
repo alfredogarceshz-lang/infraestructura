@@ -11,10 +11,4 @@ variable "datasets" {
   type        = map(string)
 }
 
-variable "example_table" {
-  description = "Example table definition in bronze dataset."
-  type = object({
-    dataset_id = string
-    table_id   = string
-  })
-}
+
