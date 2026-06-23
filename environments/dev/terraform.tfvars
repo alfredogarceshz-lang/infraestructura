@@ -9,14 +9,12 @@ labels = {
   purpose = "analytics"
 }
 
-datasets = {
-  cfg_platform = "Configuracion de plataforma"
-  brz_hubspot  = "Datos crudos de HubSpot"
-  slv_customer = "Datos estandarizados de clientes"
-  gld_sales    = "Modelo de ventas curado"
+datasets = {  
+  gim_dataset_brz_dev  = "Datos crudos (bronze)"
+  gim_dataset_slv_dev = "Datos estandarizados (silver)"
+  gim_dataset_gld_dev = "Modelo curado (gold)"
 }
 
-example_table_id = "contacts"
 secret_value     = "replace-me-dev"
 
 enable_composer  = false
