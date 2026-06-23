@@ -43,7 +43,8 @@ module "bigquery" {
   project_id = module.naming.project_id
   location   = var.region
   datasets   = var.datasets
-  
+  external_tables = var.external_tables
+
 }
 
 module "secret_manager" {
@@ -57,15 +58,24 @@ module "secret_manager" {
 module "composer" {
   source = "../../modules/composer"
 
-  create                    = var.enable_composer
-  project_id                = module.naming.project_id
-  region                    = var.region
-  composer_name             = module.naming.composer_name
-  labels                    = local.common_labels
-  machine_type              = var.composer_machine_type
-  node_count                = var.composer_node_count
-  disk_size_gb              = var.composer_disk_size_gb
-  environment_size          = var.composer_environment_size
+  create                = var.enable_composer
+  project_id            = module.naming.project_id
+  region                = var.region
+  composer_name         = module.naming.composer_name
+  labels                = local.common_labels
+  environment_size      = var.composer_environment_size
+  scheduler_cpu         = var.composer_scheduler_cpu
+  scheduler_memory_gb   = var.composer_scheduler_memory_gb
+  scheduler_storage_gb  = var.composer_scheduler_storage_gb
+  scheduler_count       = var.composer_scheduler_count
+  worker_cpu            = var.composer_worker_cpu
+  worker_memory_gb      = var.composer_worker_memory_gb
+  worker_storage_gb     = var.composer_worker_storage_gb
+  worker_min_count      = var.composer_worker_min_count
+  worker_max_count      = var.composer_worker_max_count
+  web_server_cpu        = var.composer_web_server_cpu
+  web_server_memory_gb  = var.composer_web_server_memory_gb
+  web_server_storage_gb = var.composer_web_server_storage_gb
 }
 
 module "dataproc" {

@@ -24,8 +24,20 @@ enable_vpn       = false
 enable_pubsub    = false
 enable_cloud_run = false
 
-# Configuración de Composer (pequeño para dev)
-composer_machine_type      = "n1-standard-1"
-composer_node_count        = 3
-composer_disk_size_gb      = 50
-composer_environment_size  = "SMALL"
+# Configuración de Composer 3 (Managed Airflow) — preset SMALL
+composer_environment_size     = "ENVIRONMENT_SIZE_SMALL"
+
+composer_scheduler_cpu        = 0.5
+composer_scheduler_memory_gb  = 1.875
+composer_scheduler_storage_gb = 1
+composer_scheduler_count      = 1
+
+composer_worker_cpu           = 0.5
+composer_worker_memory_gb     = 1.875
+composer_worker_storage_gb    = 1
+composer_worker_min_count     = 1
+composer_worker_max_count     = 2
+
+composer_web_server_cpu           = 0.5
+composer_web_server_memory_gb     = 1.875
+composer_web_server_storage_gb    = 1
