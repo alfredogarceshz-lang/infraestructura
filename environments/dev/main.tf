@@ -57,11 +57,15 @@ module "secret_manager" {
 module "composer" {
   source = "../../modules/composer"
 
-  create        = var.enable_composer
-  project_id    = module.naming.project_id
-  region        = var.region
-  composer_name = module.naming.composer_name
-  labels        = local.common_labels
+  create                    = var.enable_composer
+  project_id                = module.naming.project_id
+  region                    = var.region
+  composer_name             = module.naming.composer_name
+  labels                    = local.common_labels
+  machine_type              = var.composer_machine_type
+  node_count                = var.composer_node_count
+  disk_size_gb              = var.composer_disk_size_gb
+  environment_size          = var.composer_environment_size
 }
 
 module "dataproc" {

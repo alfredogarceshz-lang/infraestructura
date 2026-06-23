@@ -11,8 +11,12 @@ resource "google_composer_environment" "main" {
       image_version = "composer-2-stable"
     }
 
+    environment_size = var.environment_size
+
     node_config {
-      zone = "${var.region}-a"
+      machine_type   = var.machine_type
+      disk_size_gb   = var.disk_size_gb
+      zone           = "${var.region}-a"
     }
   }
 }
