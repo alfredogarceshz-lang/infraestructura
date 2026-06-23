@@ -23,3 +23,9 @@ enable_dataplex  = false
 enable_vpn       = false
 enable_pubsub    = false
 enable_cloud_run = false
+
+# Configuración de Composer (pequeño para dev)
+composer_machine_type      = "n1-standard-1"
+composer_node_count        = 3
+composer_disk_size_gb      = 50
+composer_environment_size  = "SMALL"
