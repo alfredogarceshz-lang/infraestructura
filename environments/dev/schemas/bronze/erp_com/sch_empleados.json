@@ -1,0 +1,252 @@
+[
+  {
+    "name": "clave_empleado",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_num_contrato",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "clave_razon_baja",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_puesto",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "nombre",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "ap_paterno",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "ap_materno",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "rfc",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "curp",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "cuenta_ahorro",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "nss",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ufm",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "correo_empresa",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "no_credito_inf",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fec_alta_inf",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fec_baja_inf",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_reg_fonacot",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "afore",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "estatus",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "sucursal",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "empl_nomina_ek",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "q_declara",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "pwd",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Clave_Enkontrol",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "Status_Proceso",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "salariodiariointegrado",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_proceso",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fechmov",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fechbaja",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_depto_nom",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tipo_oper",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "us_inv",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "us_enk9999",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "us_enk01_11",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "us_red",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "us_mail",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cc_depto",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_banco",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_pais",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_estado",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "num_tarjeta",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_agente",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "CLABE",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "factorVSM",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "reingreso",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "nickname_matrix",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_matrix_lms",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_clasif_pto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_mod_clasif_pto",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "usu_mod_clasif_pto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  }
+]

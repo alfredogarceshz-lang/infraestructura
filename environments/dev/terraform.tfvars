@@ -13,6 +13,7 @@ datasets = {
   gim_dataset_brz_dev  = "Datos crudos (bronze)"
   gim_dataset_slv_dev = "Datos estandarizados (silver)"
   gim_dataset_gld_dev = "Modelo curado (gold)"
+  gim_dataset_cfg_dev = "Modelo para auditoria (auditoria)"
 }
 
 secret_value     = "replace-me-dev"

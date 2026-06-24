@@ -9,16 +9,84 @@ module "naming" {
 module "iam" {
   source = "../../modules/iam"
 
-  project_id       = module.naming.project_id
-  service_accounts = [module.naming.service_account_dataproc, module.naming.service_account_composer]
+  project_id = module.naming.project_id
+  service_accounts = [
+    "sa-terraform-ace-${var.environment}",
+    "sa-composer-ace-${var.environment}",
+    "sa-dataproc-ace-${var.environment}",
+    "sa-dataform-ace-${var.environment}",
+    "sa-dataplex-ace-${var.environment}",
+    "sa-cf-ace-${var.environment}"
+  ]
   project_roles = {
-    (module.naming.service_account_dataproc) = [
-      "roles/dataproc.worker",
-      "roles/storage.objectAdmin"
+    ("sa-terraform-ace-${var.environment}") = [
+      "roles/iam.serviceAccountAdmin",
+      "roles/iam.serviceAccountUser",
+      "roles/iam.securityAdmin",
+      "roles/resourcemanager.projectIamAdmin",
+      "roles/serviceusage.serviceUsageAdmin",
+      "roles/bigquery.admin",
+      "roles/storage.admin",
+      "roles/composer.admin",
+      "roles/dataproc.admin",
+      "roles/dataplex.admin",
+      "roles/pubsub.admin",
+      "roles/secretmanager.admin",
+      "roles/monitoring.admin",
+      "roles/logging.admin",
+      "roles/artifactregistry.admin"
     ]
-    (module.naming.service_account_composer) = [
+
+    ("sa-composer-ace-${var.environment}") = [
       "roles/composer.worker",
-      "roles/secretmanager.secretAccessor"
+      "roles/storage.objectAdmin",
+      "roles/bigquery.jobUser",
+      "roles/bigquery.dataEditor",
+      "roles/dataproc.editor",
+      "roles/dataplex.editor",
+      "roles/pubsub.publisher",
+      "roles/pubsub.subscriber",
+      "roles/secretmanager.secretAccessor",
+      "roles/logging.logWriter",
+      "roles/monitoring.metricWriter"
+    ]
+
+    ("sa-dataproc-ace-${var.environment}") = [
+      "roles/dataproc.worker",
+      "roles/storage.objectAdmin",
+      "roles/bigquery.jobUser",
+      "roles/bigquery.dataEditor",
+      "roles/bigquery.readSessionUser",
+      "roles/dataplex.editor",
+      "roles/pubsub.subscriber",
+      "roles/secretmanager.secretAccessor",
+      "roles/logging.logWriter",
+      "roles/monitoring.metricWriter"
+    ]
+
+    ("sa-dataform-ace-${var.environment}") = [
+      "roles/dataform.editor",
+      "roles/bigquery.jobUser",
+      "roles/bigquery.dataEditor",
+      "roles/bigquery.dataViewer",
+      "roles/logging.logWriter"
+    ]
+
+    ("sa-dataplex-ace-${var.environment}") = [
+      "roles/dataplex.editor",
+      "roles/bigquery.metadataViewer",
+      "roles/storage.objectViewer",
+      "roles/datacatalog.viewer",
+      "roles/logging.logWriter"
+    ]
+
+    ("sa-cf-ace-${var.environment}") = [
+      "roles/storage.objectAdmin",
+      "roles/pubsub.publisher",
+      "roles/pubsub.subscriber",
+      "roles/secretmanager.secretAccessor",
+      "roles/logging.logWriter",
+      "roles/monitoring.metricWriter"
     ]
   }
 }
@@ -64,7 +132,10 @@ module "composer" {
   project_id    = module.naming.project_id
   region        = var.region
   composer_name = module.naming.composer_name
+  service_account_email = module.iam.composer_service_account_email
   labels        = local.common_labels
+
+  depends_on = [module.iam]
 }
 
 module "dataproc" {

@@ -19,6 +19,12 @@ variable "composer_name" {
   description = "Nombre del ambiente Cloud Composer."
 }
 
+variable "service_account_email" {
+  type        = string
+  default     = null
+  description = "Email de la service account a usar por Composer. Ej: sa-composer-ace-dev@<project>.iam.gserviceaccount.com"
+}
+
 variable "labels" {
   type        = map(string)
   default     = {}

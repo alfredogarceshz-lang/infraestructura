@@ -1,0 +1,312 @@
+[
+  {
+    "name": "id_puesto",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_nom_pto",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "puesto_desc_esp",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_puesto",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_estructura",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "clave_nivel",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_categoria",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_emp_gtos_pag",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fec_creacion",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fec_cancelacion",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_reg_patronal",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_emp_gtos_destino",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "pto_comentarios",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_ubicacion",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "salario_nomina",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sdi",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "salario_hr",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "basevar_imss",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "basevar_inf",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sdi_imss",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sdi_inf",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "codigo",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "gpo_imss",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cuota_ahorro",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "dias_cal_isr",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tipo_formula",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tipo_nomina",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_turno",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_zona_economica",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_registro",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_salario",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_jornada",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_tipo_salario",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_destajista",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "honorarios",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "sindicato",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ptu",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "num",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "statuspt",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_unegocio",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_puesto_nomina",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "autoriza",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clave_empleado",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "nom_odbc",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_desarrollo",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tipo_formula_imss",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fechmov",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "no_aplica",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_puesto_origen",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "num_replica",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "usa_enk",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "usa_mail",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "usa_ured",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_dominio",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "usa_inv",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "usa_enk9",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_depto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_SubDesarrollo",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "organizacion",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_lms_matrix_cat_org",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "bit_especiales",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tipo_vac",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  }
+]

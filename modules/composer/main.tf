@@ -17,6 +17,11 @@ resource "google_composer_environment" "main" {
     # del plano de control (base scheduling, API server, etc.).
     environment_size = var.environment_size
 
+    # Composer usa esta service account para ejecutar workloads de Airflow.
+    node_config {
+      service_account = var.service_account_email
+    }
+
     # workloads_config reemplaza node_config: Composer 3 es Managed Airflow
     # (sin GKE expuesto), por lo que se configura cada componente de Airflow
     # de forma individual en lugar de aprovisionar nodos de VM.

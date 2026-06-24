@@ -1,0 +1,122 @@
+[
+  {
+    "name": "id_num_contrato",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_aspirante",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_status_contrato",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "fecha_ingreso",
+    "type": "DATE",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "fecha_firma_c",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_ini_calculo",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_baja",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_antiguedad",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "dias_periodo",
+    "type": "NUMERIC",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_contratacion",
+    "type": "DATE",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "comentario_estatus",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "tarjeta_estacionamiento",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "num",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_contrato_per",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_horario_comida",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_dia_pago",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_tipo_contrato",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_forma_pago",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_per_ini",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_per_fin",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "desc_sdi",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_alta",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_alta_nomina",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_baja_nomina",
+    "type": "DATE",
+    "mode": "NULLABLE"
+  }
+]

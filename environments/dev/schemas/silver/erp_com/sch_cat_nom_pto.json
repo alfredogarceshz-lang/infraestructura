@@ -1,0 +1,72 @@
+[
+  {
+    "name": "id_nom_pto",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "puestos_nom",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_desc_puesto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_nom",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_clasif_pto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_mod",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "usu_mod",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_nom_pto",
+    "type": "INT64",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "puestos_nom",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "id_desc_puesto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "cve_nom",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "id_clasif_pto",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "fecha_mod",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "usu_mod",
+    "type": "INT64",
+    "mode": "NULLABLE"
+  }
+]
