@@ -141,10 +141,13 @@ module "composer" {
 module "dataproc" {
   source = "../../modules/dataproc"
 
-  create      = var.enable_dataproc
-  project_id  = module.naming.project_id
-  region      = var.region
-  environment = var.environment
+  create                = var.enable_dataproc
+  project_id            = module.naming.project_id
+  region                = var.region
+  environment           = var.environment
+  labels                = local.common_labels
+  service_account_email = module.iam.service_account_emails["sa-dataproc-ace-${var.environment}"]
+  main_python_file_uri  = "gs://${module.naming.bucket_bronze}/dataproc/jobs/main.py"
 }
 
 module "dataplex" {
@@ -153,7 +156,8 @@ module "dataplex" {
   create     = var.enable_dataplex
   project_id = module.naming.project_id
   region     = var.region
-  lake_name  = module.naming.dataplex_lake
+  environment = var.environment
+  labels      = local.common_labels
 }
 
 module "vpn" {
